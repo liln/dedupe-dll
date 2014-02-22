@@ -1,6 +1,6 @@
 require_relative "node"
 
-class DDList
+class DLList
   attr_reader :head, :tail
 
   def initialize
@@ -10,11 +10,21 @@ class DDList
 
   def print_all
     n1 = @head
-    while n1 do
-      puts n1.value.to_s
+    while n1.nexxt do
+      print n1.value.to_s + ", "
       n1 = n1.nexxt
     end
+    print n1.value.to_s + "\n"
+  end
 
+  def to_a
+    n1 = @head
+    a = Array.new
+    while n1 do
+      a << n1.value
+      n1 = n1.nexxt
+    end
+    a
   end
 
   def insert_after(node, value)
@@ -30,9 +40,10 @@ class DDList
   end
 
   def prepend(value)
-    if @head.nil? # first node in list
+    if @head.nil? # first node to be added in list
       node = Node.new(value,nil,nil)
-      @head, @tail = node
+      @head = node
+      @tail = node
     else
       insert_before(@head, value)
     end

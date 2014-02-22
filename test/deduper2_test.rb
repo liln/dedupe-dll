@@ -1,9 +1,9 @@
 require "test_helper"
 require "dllist"
-require "deduper"
+require "deduper2"
 
-class DeduperTest < Minitest::Unit::TestCase
-  include Deduper
+class Deduper2Test < Minitest::Unit::TestCase
+  include Deduper2
 
   def setup
     @list = DLList.new
@@ -12,7 +12,7 @@ class DeduperTest < Minitest::Unit::TestCase
     end
   end
 
-  def test_deduper1
+  def test_deduper2
     dedupe(@list)
     assert_equal @list.to_a, [8,4,2,9,1,3]
   end

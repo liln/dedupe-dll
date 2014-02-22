@@ -1,7 +1,7 @@
 require_relative "dllist"
-require_relative "deduper"
+require_relative "deduper2"
 
-include Deduper
+include Deduper2
 
 list = DLList.new
 generator = Random.new
@@ -12,7 +12,7 @@ end
 puts "List of 200 items: "
 list.print_all
 
-Deduper.dedupe(list)
+Deduper2.dedupe(list)
 
 puts "Output: "
 list.print_all
