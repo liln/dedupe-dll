@@ -30,3 +30,11 @@ Without using the Array to store the values, two pointers are used to traverse t
 ```
 ruby lib/problem2.rb
 ```
+
+## Author
+
+[Lillian Ng](https://github.com/orangeninjamidget)
+
+## License
+
+MIT: [http://lng.mit-license.org](http://lng.mit-license.org)

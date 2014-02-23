@@ -12,7 +12,7 @@ end
 puts "List of 200 items: "
 list.print_all
 
-Deduper2.dedupe(list)
+dedupe(list)
 
 puts "Output: "
 list.print_all
